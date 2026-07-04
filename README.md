@@ -1,5 +1,5 @@
 # **Weather-API Project**
-![Project Design and Structure]<img width="3460" height="2036" alt="weather-api" src="https://github.com/user-attachments/assets/52f296cd-47b0-4935-9d2d-c487defaa9bb" />
+<img width="3460" height="2036" alt="weather-api" alt="System Design" src="https://github.com/user-attachments/assets/52f296cd-47b0-4935-9d2d-c487defaa9bb" />
 
 ## **Outcomes for the project**
 - To build a working weather-api
