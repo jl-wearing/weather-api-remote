@@ -8,3 +8,7 @@
 - To test the endpoints through Postman
 - To learn and apply Docker concepts
 - *To implement test cases using JUnit
+
+
+## **API Specification** ##
+### GET /api/weather/{city}
