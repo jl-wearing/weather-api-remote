@@ -13,6 +13,7 @@
 ## **API Specification** ##
 ### GET /api/weather/{city}
 Returns the weather as application/json.
+
 Things to consider:
 
 - what if the city doesn't exist?
@@ -20,3 +21,23 @@ Things to consider:
 - what if either external api is down?
 - what if the format of the request is incorrect? (e.g. wrongly formatted, incorrect data types, etc.)
 
+### GET http://api.openweathermap.org/geo/1.0/direct 
+Returns the latitudes and longitudes for the given city.
+
+Request Parameters:
+- q as the city
+- limit as the number of results we want to obtain, mainly because there may be numerous cities with the same name.
+- appid as the api-key
+
+Things to consider:
+
+- what if the openweather api is down?
+- what if the format of the request is incorrect?
+
+### GET https://api.openweathermap.org/data/2.5/weather
+Returns the weather for that city.
+
+Request parameters:
+- lat represents the latitudes
+- lon represents the longitudes
+- appid as the api-key

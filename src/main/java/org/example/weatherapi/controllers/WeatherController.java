@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.List;
-
 @RestController
 @RequestMapping("/api")
 public class WeatherController {
@@ -29,10 +27,14 @@ public class WeatherController {
         // Exchange the city name for latitudes and longitudes.
         List<Coordinates> coordinates = weatherService.getLatandLon(city);
 
-        // Exchange the coordinates for weather data.
+        double latitude = coordinates.getFirst().lat();
+        double longitude = coordinates.getFirst().lon();
+
+        // get the weather for that city.
+        WeatherResponse weather = weatherService.getWeather(latitude, longitude);
 
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(new WeatherResponse(Arrays.toString(coordinates.toArray())));
+                .body(weather);
     }
 }
