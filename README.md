@@ -12,3 +12,11 @@
 
 ## **API Specification** ##
 ### GET /api/weather/{city}
+Returns the weather as application/json.
+Things to consider:
+
+- what if the city doesn't exist?
+- what if there are more cities with the same name?
+- what if either external api is down?
+- what if the format of the request is incorrect? (e.g. wrongly formatted, incorrect data types, etc.)
+
